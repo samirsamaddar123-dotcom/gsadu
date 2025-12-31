@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year Suvam</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+
+  .card {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 2s ease;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #d63384;
+    animation: pop 1.5s ease-in-out infinite alternate;
+  }
+
+  .name {
+    font-size: 24px;
+    color: #2575fc;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+  }
+
+  /* Floral design */
+  .flower {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff6f91, #ff9671);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .flower::before,
+  .flower::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: inherit;
+  }
+
+  .flower::before { transform: rotate(60deg); }
+  .flower::after { transform: rotate(120deg); }
+
+  .f1 { top: -30px; left: -30px; }
+  .f2 { bottom: -30px; right: -30px; animation-delay: 2s; }
+  .f3 { top: -30px; right: -30px; animation-delay: 4s; }
+  .f4 { bottom: -30px; left: -30px; animation-delay: 1s; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+
+  button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background: #d63384;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #b92d6f;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="flower f1"></div>
+  <div class="flower f2"></div>
+  <div class="flower f3"></div>
+  <div class="flower f4"></div>
+
+  <h1>🎆 Happy New Year 2026 🎆</h1>
+  <div class="name">— Suvam —</div>
+
+  <p>
+    May this New Year bring you happiness, success,<br>
+    good health, and beautiful moments 🌸
+  </p>
+
+  <button onclick="wish()">Click for a Wish</button>
+</div>
+
+<script>
+  function wish() {
+    alert("✨ Happy New Year, Suvam! May all your dreams come true ✨");
+  }
+</script>
+
+</body>
+</html>
